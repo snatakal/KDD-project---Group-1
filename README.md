@@ -17,7 +17,7 @@ Data analytics is used to understand the relationships between these factors so 
 #### Research Question
 This project will take a look at how in-game factors such as gold earned, vision score, and creep score affect the outcome of the game. The data will be analyzed to identify important trends that may be invisible to simple statistical analysis. The collected information regarding important features and trends will be used to develop a predictive model that can predict the outcome of a game given some initial match data.
 
-Additionally, we will also perform clustering analysis to find important characteristics/traits of champions which would be tied back as an input to the predictive model enabling more accurate results. 
+Additionally, we will also perform clustering to find important characteristics/traits of champions which would be tied back as an input to the predictive model enabling more accurate results. 
 
 Such a model will be beneficial to the league game-playing community, especially professional players and teams that rely on game analyses.
 
