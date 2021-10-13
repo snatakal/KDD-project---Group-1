@@ -27,7 +27,7 @@ The [dataset](https://www.kaggle.com/jasperan/league-of-legends-1v1-matchups-res
 Additional game data will be obtained from League servers using the Riot Games [API](https://developer.riotgames.com/)
 
 ### CRISP-DM Process:
-We have undergone these steps as a part of CRISP-DM:
+We have undergone these steps as part of CRISP-DM:
 1) Research Phase
 2) Initial Data Exploration
 
