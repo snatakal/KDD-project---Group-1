@@ -2,4 +2,4 @@
 ############
 # too large for git
 data/
-*.csv
+matchups.csv
