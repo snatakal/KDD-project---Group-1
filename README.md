@@ -2,10 +2,10 @@
 
 ## Team Members:
 
-Tarun Ravada
-Vishwath Kamalanathan
-Swetha Natakala Ramakumar
-Adithi Macherla
+- Tarun Ravada
+- Vishwath Kamalanathan
+- Swetha Natakala Ramakumar
+- Adithi Macherla
 
 ## Project Description:
 
