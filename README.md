@@ -126,9 +126,11 @@ The distribution of the class label was plotted across different features. The p
 Our dataset contains information on all the 156 different champions available in-game as of Patch 11.17
  
 Champion Winrate
+
 ![Champion Winrate](assets/winrate.png)
 
 Champion win rate by role
+
 ![Champion Winrate by role](assets/winrate_by_role.png)
 
 All champion win rates are within the range of 44 to 54 percent. This is expected since the game is constantly balanced so that all champions have a comparable win rate. 
