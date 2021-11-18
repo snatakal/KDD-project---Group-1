@@ -37,13 +37,13 @@ More information about the data is provided in the [Data Understanding](#data-un
 A guide on navigating the repo. To be added.
 
 ## CRISP-DM Process:
-- Business Understanding
-- Data Understanding
-- Data Transformation
-- Modeling Phase
-- Evaluation Phase
+- [Business Understanding](#business-understanding)
+- [Data Understanding](#data-understanding)
+- [Data Transformation](#data-transformation)
+- [Modeling Phase](#modeling-phase)
+- [Evaluation Phase](#evaluation-phase)
 
-### Business Understanding / Problem Understanding
+### Business Understanding
 As outlined in the [Introduction](#introduction), for those with high stakes in League, constantly improving their game win rate is important. Being able to determine the chances of winning a match based on the team composition is very valuable to players, as it will help them choose the best possible champion for each match.
 
 Team composition by itself does not provide enough information to determine the outcome of a match. Several other factors such as a players’ proficiency, a champions’ usefulness, etc., play an important role in the outcome of a match.
@@ -142,7 +142,6 @@ Status: in progress
 
 Associated notebooks
 - [Dataset for Champion k/da by role](preprocessing/champ_role_kda.ipynb)
-- [Dataset for champion winrate by role]()
 
 Each record in the dataset corresponds to one player in a match. The dataset contains information about multiple players from each match. Since the input to the predictive model will be the team compositions of each team along with other attributes, before the modeling stage, the data was grouped and transformed. Additional datasets were created for the new features. 
 
