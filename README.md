@@ -79,7 +79,7 @@ Unique attributes - attributes unique to every match or the game itself
 Irrelevant attributes
  - Unnamed: 13
 
-#### Data preprocessing:
+#### Data preprocessing
 The original data ‘matches.csv’ contained irrelevant attributes, missing values, and columns with more than one attribute. The data was cleaned, irrelevant attributes were dropped, and null and invalid records were removed. 
 
 #### Data Exploration
@@ -116,7 +116,7 @@ Correlation analysis showed that Kills, Assists, and Gold have a stronger correl
 Feature value distributions were studied to ensure the data had no irregularity or outliers. All the feature distributions were as expected.
 
 ##### Class Distribution
-![Class Distribution](assets/class distribution.png)
+![Class Distribution](assets/class_distribution.png)
 The distribution of the class label was plotted across different features. The plots show that the data is almost equally distributed across each class.
 
 ##### Champion Data analysis
@@ -126,7 +126,7 @@ Champion Winrate
 ![Champion Winrate](assets/winrate.png)
 
 Champion win rate by role
-![Champion Winrate by role](assets/winrate by role.png)
+![Champion Winrate by role](assets/winrate_by_role.png)
 
 All champion win rates are within the range of 44 to 54 percent. This is expected since the game is constantly balanced so that all champions have a comparable win rate. 
 
