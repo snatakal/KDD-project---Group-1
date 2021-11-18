@@ -100,45 +100,50 @@ After processing the dataset contained 1312248 records and 15 columns
 
 #### Data Exploration
 Associated Notebooks
-[EDA.ipynb](link)
+- [EDA](EDA.ipynb)
 
 The data was explored to understand its range of values and types of values. This helped determine which additional features can be generated from the data to use as inputs to the model.
 
 ##### Correlation
-Insert image
+![Feature Correlation](assets\correlation.png)
+
 Correlation analysis showed that Kills, Assists and Gold have a stronger correlation with winning than other factors. 
 
 ##### Feature Distribution
+![Feature Distribution](assets\feature_distribution.png)
 Feature value distributions were studied to ensure the data had no irregularity or outliers. All the feature distributions were as expected.
 
 ##### Class Distribution
+![Class Distribution](assets\class distribution.png)
 The distribution of the class label was plotted across different features. The plots show that the data is almost equally distributed across each class.
 
 ##### Champion Data analysis
 Our dataset contains information on all the 156 different champions available in game as of Patch 11.17
  
-Insert two images
 Champion Winrate
+![Champion Winrate](assets\winrate.png)
+
 Champion win rate by role
+![Champion Winrate by role](assets\winrate by role.png)
 
 All champion win rates are within the range of 44 to 54 percent. This is expected, since the game is constantly balanced so that all champions have a comparable win rate. Champion win rates by role are in the range of 0 - 100 percent. This implies that champion win rates in each role can be an important factor in determining the outcome of a match.
 
 ### Data Transformation
 Status: in progress
 
-Associated notebooks (links)
+Associated notebooks
+- [Dataset for Champion k/da by role](preprocessing\champ_role_kda.ipynbpreprocessing\champ_role_kda.ipynb)
+- [Dataset for champion winrate by role]()
 
-Each record in the dataset currently corresponds to one player in a match. The dataset contains information about multiple players from each match. Since the input to the predictive model will be the team compositions of each team along with other attributes, before the modelling stage, the data was grouped, transformed, and additional features were generated. 
+Each record in the dataset currently corresponds to one player in a match. The dataset contains information about multiple players from each match. Since the input to the predictive model will be the team compositions of each team along with other attributes, before the modelling stage, the data was grouped and transformed. Additional datasets were created for the new features. 
 
 A sample input to the model would have the following structure
-<team>_<role>_champion, <champion>_<role>_k/da, and <champion>_winrate for each of the 10 players in the game. Totaling to 30 input features.
+- <team>_<role>_champion, <champion>_<role>_k/da, and <champion>_winrate for each of the 10 players in the game. Totaling to 30 input features.
 
-
-### Modelling
+### Modeling
 We will be using the XGBoost classifier to build a basic model and evaluate how well the algorithm performs on the data. XGBoost is an optimized decision tree classifier and is suited for the data used in this project. Support Vector Machine (SVM) and K-Nearest Neighbors will be considered for alternative baselines on our data. 
 
 Given that the dataset has more than 50K data points, sophisticated classifiers such as MLP or Neural Nets will be considered for the final model.
 
 ### Evaluation
-The model’s performance will be measured through Accuracy, Precision, Recall, AUC, and ROC curves with emphasis on the Recall metric. The scores will be evaluated on the baselines discussed in [Success Criteria](link)
-
+The model’s performance will be measured through Accuracy, Precision, Recall, AUC, and ROC curves with emphasis on the Recall metric. The scores will be evaluated on the baselines discussed in [Success Criteria](#success-criteria)
