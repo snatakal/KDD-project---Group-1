@@ -109,14 +109,17 @@ After processing the dataset contained 1312248 records and 15 columns
 
 ##### Correlation
 ![Feature Correlation](assets/correlation.png)
+
 Correlation analysis showed that Kills, Assists, and Gold have a stronger correlation with winning than other factors. 
 
 ##### Feature Distribution
 ![Feature Distribution](assets/feature_distribution.png)
+
 Feature value distributions were studied to ensure the data had no irregularity or outliers. All the feature distributions were as expected.
 
 ##### Class Distribution
 ![Class Distribution](assets/class_distribution.png)
+
 The distribution of the class label was plotted across different features. The plots show that the data is almost equally distributed across each class.
 
 ##### Champion Data analysis
