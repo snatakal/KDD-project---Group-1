@@ -1,6 +1,8 @@
 # League of Legends Match Outcome Prediction
 This project is being developed as part of the Knowledge Discovery in Databases (ITCS - 6162) course at The University of North Carolina at Charlotte.
 
+![intersting gif](assets/interesting_gif.gif)
+
 ## Team Members:
 - Tarun Ravada
 - Vishwath Kamalanathan
