@@ -110,7 +110,7 @@ After processing the dataset contained 1312248 records and 15 columns
 - ROLE - The role the player was playing in the match
 
 ##### Correlation
-![Feature Correlation](assets/correlation.png)
+![Feature Correlation](assets/correlation1.png)
 
 Correlation analysis showed that Kills, Assists, and Gold have a stronger correlation with winning than other factors. 
 
