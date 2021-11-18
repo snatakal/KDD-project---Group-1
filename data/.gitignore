@@ -1,5 +1,4 @@
 # Datasets #
 ############
 # too large for git
-data/
-matchups.csv
+*.csv
