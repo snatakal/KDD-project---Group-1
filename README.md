@@ -105,12 +105,12 @@ Associated Notebooks
 The data was explored to understand its range of values and types of values. This helped determine which additional features can be generated from the data to use as inputs to the model.
 
 ##### Correlation
-![Feature Correlation](assets\correlation.png)
+![Feature Correlation](assets/correlation.png)
 
 Correlation analysis showed that Kills, Assists and Gold have a stronger correlation with winning than other factors. 
 
 ##### Feature Distribution
-![Feature Distribution](assets\feature_distribution.png)
+![Feature Distribution](assets/feature_distribution.png)
 Feature value distributions were studied to ensure the data had no irregularity or outliers. All the feature distributions were as expected.
 
 ##### Class Distribution
@@ -121,7 +121,7 @@ The distribution of the class label was plotted across different features. The p
 Our dataset contains information on all the 156 different champions available in game as of Patch 11.17
  
 Champion Winrate
-![Champion Winrate](assets\winrate.png)
+![Champion Winrate](assets/winrate.png)
 
 Champion win rate by role
 ![Champion Winrate by role](assets\winrate by role.png)
@@ -132,7 +132,7 @@ All champion win rates are within the range of 44 to 54 percent. This is expecte
 Status: in progress
 
 Associated notebooks
-- [Dataset for Champion k/da by role](preprocessing\champ_role_kda.ipynbpreprocessing\champ_role_kda.ipynb)
+- [Dataset for Champion k/da by role](preprocessing/champ_role_kda.ipynb)
 - [Dataset for champion winrate by role]()
 
 Each record in the dataset currently corresponds to one player in a match. The dataset contains information about multiple players from each match. Since the input to the predictive model will be the team compositions of each team along with other attributes, before the modelling stage, the data was grouped and transformed. Additional datasets were created for the new features. 
