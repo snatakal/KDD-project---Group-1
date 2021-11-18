@@ -40,8 +40,8 @@ A guide on navigating the repo. To be added.
 - [Business Understanding](#business-understanding)
 - [Data Understanding](#data-understanding)
 - [Data Transformation](#data-transformation)
-- [Modeling Phase](#modeling-phase)
-- [Evaluation Phase](#evaluation-phase)
+- [Modeling](#modeling)
+- [Evaluation](#evaluation)
 
 ### Business Understanding
 As outlined in the [Introduction](#introduction), for those with high stakes in League, constantly improving their game win rate is important. Being able to determine the chances of winning a match based on the team composition is very valuable to players, as it will help them choose the best possible champion for each match.
