@@ -163,10 +163,8 @@ Given that League has 156 different champions and 5 different roles, a total of 
 
 #### Transformation
 
-Associated notebooks
-
 Associated Notebooks
-- [Transformations](preprocessing/transform_demo.ipynb)
+- [Transformations](transform/transform_demo.ipynb)
 
 Each record in the matchups dataset corresponds to one player in a match, and also contains in-game information that is not available before the match. To predict the outcome of a match, the input vector to the predictive model has to contain information on all of the 5 different roles for each of the two teams in the match, along with their associated metrics. 
 
