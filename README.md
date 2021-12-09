@@ -146,8 +146,7 @@ From EDA we learned that overall champion win rate, champion win rate by role, k
 #### Metric Generation
 
 Associated notebooks
-- [Champion metrics](preprocessing/champ_metrics.ipynb)
-- [Champion role metrics](preprocessing/champ_role_metrics.ipynb)
+- [Dataset for Champion k/da by role](preprocessing/champ_role_kda.ipynb)
 
 Six new metrics were considered 
 - Champion win-rate - The matches won/ total matches ratio of a champion 
@@ -165,7 +164,6 @@ Given that League has 156 different champions and 5 different roles, a total of 
 #### Transformation
 
 Associated notebooks
-- [Transformation](transform/transform_demo.ipynb)
 
 Each record in the matchups dataset corresponds to one player in a match, and also contains in-game information that is not available before the match. To predict the outcome of a match, the input vector to the predictive model has to contain information on all of the 5 different roles for each of the two teams in the match, along with their associated metrics. 
 
@@ -178,51 +176,50 @@ The final transformed dataset has 126262 rows and 51 columns, where each row cor
 To get a better understanding of how the data was transformed please refer to the associated notebooks.
 
 ### Machine Learning
-
-Associated notebooks
-- [Modeling](model/training.ipynb)
-
 #### Preprocessing
 
-The transformed dataset contained 40 continuous features, and 11 categorical features including the prediction label. Data types were asserted to ensure each column was the correct data type. 
+The transformed dataset contained 40 continuous features and 11 categorical features including the prediction label. Data types were asserted to ensure each column was the correct data type. 
 
-The 10 champion names were converted to categorical features and could take an integer value from 1-156. The 40 champion metrics were continuous features, and were normalized using a  Standard Scaler. The prediction label was converted to a binary feature and determined if team1 won or lost.
+The 10 champion names were converted to categorical features and could take an integer value from 1-156. The 40 champion metrics were continuous features and were normalized using a  Standard Scaler. The prediction label was converted to a binary feature and determined if team1 won or lost.
 
 The data set was balanced 50 - 50 therefore there was no class imbalance problem.
 
-#### Modeling
+#### Modelling
 
-The data was split for training and testing in a 80 - 20 ratio. Since the data is balanced, no stratification techniques needed to be employed. 
+The data was split for training and testing in an 80 - 20 ratio. Since the data is balanced, no stratification techniques needed to be employed. 
 
-We trained and evaluated three machine learning algorithms XGBoost, Random Forest and Neural Network model. 
+We trained and evaluated three machine learning algorithms XGBoost, Random Forest, and Neural Network model. 
 
-We trained the model using XGBoost Classifier and used it as  baseline accuracy. The intuition behind using a XGBoost model is that it performs Boosting and is more fine tuned to perform better than other classical classification algorithms. 
+We trained the model using XGBoost Classifier and used it as baseline accuracy. The intuition behind using an XGBoost model is that it performs Boosting and is more fine-tuned to perform better than other classical classification algorithms. 
 
-Random Forest model was trained on the same train set as XGBoost. The model performed surprisingly better than the XGBoost model. 
+The Random Forest model was trained on the same train set as XGBoost. The model performed surprisingly better than the XGBoost model. 
 
 We implemented a fully connected deep learning model using 5 Hidden layers to better find patterns in the dataset and to improve the prediction accuracy. We added dropouts to prevent the model from overfitting. 
+
+
 
 #### Evaluation
 
 The XGboost model’s accuracy was considered as the baseline accuracy. The evaluation of the accuracy was performed using the test data set. The XGBoost model’s accuracy is at 52%
 
-We further developed a Random Forest model which was evaluated on the test dataset to have accuracy of 54%, with precision and recall of the model at 54.4% and 54.1% respectively. 
+We further developed a Random Forest model which was evaluated on the test dataset to have an accuracy of 54%, with precision and recall of the model at 54.4% and 54.1% respectively. 
 
 The neural network model when tested for accuracy using the test dataset produced about 54% which is inline with the Random Forest model’s accuracy. 
 
-Random forest model and the Neural Network model slightly performs better than the established baseline of 52% accuracy by the XGBoost mode 
+The Random forest model and the Neural Network model slightly performs better than the established baseline of 52% accuracy by the XGBoost model.
 
-Future work - The models will be further evaluated using SHAP, ELI5 and Lime to better understand the model’s behaviour. 
+Future work - The models will be further evaluated using SHAP, ELI5, and Lime to better understand the model’s behavior. 
+
 
 ### Conclusion
 
-The goal of this project was to identify factors that can determine the outcome of a match of league of legends based on the champions being played. Our initial dataset was a large dataset containing past match data. Through EDA we identified two metrics: win rate and kda, that could be calculated from past matches and used to predict the outcome of future matches. 
+The goal of this project was to identify factors that can determine the outcome of a match of the league of legends based on the champions being played. Our initial dataset was a large dataset containing past match data. Through EDA we identified two metrics: win rate and kda, that could be calculated from past matches and used to predict the outcome of future matches. 
 
-Using our initial dataset we calculated 4 new metrics for each champion in the game and generated 4 new datasets. In order to generate representative metrics we had to only consider those champions that had at least 16 games played in a role. Our data had to be transformed and combined with the metrics for each champion to generate the final dataset. Records that had missing metrics were dropped. 
+Using our initial dataset we calculated 4 new metrics for each champion in the game and generated 4 new datasets. In order to generate representative metrics, we had to only consider those champions that had at least 16 games played in a role. Our data had to be transformed and combined with the metrics for each champion to generate the final dataset. Records that had missing metrics were dropped. 
 
 Though our model was not able to perform significantly better than the established baseline, we were able to identify metrics and game factors that could help determine the outcome of a match. 
 The biggest challenge we faced was determining how to transform our initial dataset into our final dataset. Since there was no order to the data, the class balance of the final dataset was entirely dependent on how the data was transformed. We determined that making the dataset balanced 50 -50 would work the best.
-The other challenge was the size of the dataset. Transforming our data and modeling took several hours. We solved this problem by parallelising the transformation tasks. And using kaggle and colab for modeling. 
+The other challenge was the size of the dataset. Transforming our data and modeling took several hours. We solved this problem by parallelizing the transformation tasks. And using kaggle and colab for modeling. 
 
 We believe that our model is limited in its capacity to learn due to the large range of values the 10 categorical columns can take. A solution to this problem would be to split the 156 champions into smaller categories, this way we would have enough data to capture the range of values each feature can take. 
-Additionally, individual player metrics could be used alongside champion metrics, as player skill plays a huge role in the outcome of a match, and is a metric that can be calculated from past matches. 
+Additionally, individual player metrics could be used alongside champion metrics, as player skill plays a huge role in the outcome of a match, and is a metric that can be calculated from past matches.  
