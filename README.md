@@ -190,7 +190,7 @@ The 10 champion names were converted to categorical features and could take an i
 
 The data set was balanced 50 - 50 therefore there was no class imbalance problem.
 
-#### Modelling
+#### Modeling
 
 The data was split for training and testing in a 80 - 20 ratio. Since the data is balanced, no stratification techniques needed to be employed. 
 
