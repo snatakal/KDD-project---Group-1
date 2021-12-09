@@ -165,6 +165,9 @@ Given that League has 156 different champions and 5 different roles, a total of 
 
 Associated notebooks
 
+Associated Notebooks
+- [Transformations](preprocessing/transform_demo.ipynb)
+
 Each record in the matchups dataset corresponds to one player in a match, and also contains in-game information that is not available before the match. To predict the outcome of a match, the input vector to the predictive model has to contain information on all of the 5 different roles for each of the two teams in the match, along with their associated metrics. 
 
 The matchups dataset was grouped by match_id and transformed such that each record corresponds to a match, and the metrics associated with the champions in that match.
@@ -185,6 +188,8 @@ The 10 champion names were converted to categorical features and could take an i
 The data set was balanced 50 - 50 therefore there was no class imbalance problem.
 
 #### Modelling
+Associated Notebooks
+- [Modelling](model/training.ipynb)
 
 The data was split for training and testing in an 80 - 20 ratio. Since the data is balanced, no stratification techniques needed to be employed. 
 
